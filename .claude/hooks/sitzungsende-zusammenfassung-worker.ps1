@@ -20,7 +20,7 @@ $ErrorActionPreference = "Continue"
 $env:RENTENAUSKUNFT_HOOK_INTERN = "1"
 
 $historyVerzeichnis = Join-Path $ProjektVerzeichnis "specs\history"
-$historyDatei = Join-Path $historyerzeichnis "history.md"
+$historyDatei = Join-Path $historyVerzeichnis "history.md"
 
 if (-not (Test-Path $historyVerzeichnis)) {
     New-Item -ItemType Directory -Path $historyVerzeichnis -Force | Out-Null
