@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"$CLAUDE_PROJECT_DIR/.claude/hooks/sitzungsstart-history-laden.ps1\"",
+            "timeout": 30,
+            "statusMessage": "Sitzungs-History wird in den Kontext geladen..."
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"$CLAUDE_PROJECT_DIR/.claude/hooks/sitzungsende-zusammenfassung.ps1\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
