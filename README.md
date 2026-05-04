@@ -44,3 +44,7 @@ Beim Öffnen eines neuen Chatfensters oder Terminals wird der Inhalt von `specs/
 │   └── sitzungsende-zusammenfassung-worker.ps1 # Hintergrund-Worker
 └── settings.json                               # Hook-Registrierung
 ```
+
+## Beispiel-Gedächtnis
+
+Damit du sofort sehen kannst, wie das Gedächtnis aussieht, enthält dieses Projekt eine Beispieldatei unter [specs/history/history.md](specs/history/history.md). Dort siehst du das Format, in dem die Sitzungen Zeile für Zeile mit Zeitstempel und Kurzzusammenfassung gespeichert werden.
