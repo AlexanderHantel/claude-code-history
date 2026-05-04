@@ -7,7 +7,7 @@ $ErrorActionPreference = "Stop"
 
 # Endlosschleifen-Schutz: Wenn dieser Hook aus einem von uns selbst
 # gestarteten "claude -p"-Sub-Prozess kommt, nichts tun.
-if ($env:RENTENAUSKUNFT_HOOK_INTERN -eq "1") {
+if ($env:CLAUDE_HISTORY_HOOK_INTERN -eq "1") {
     exit 0
 }
 
@@ -37,7 +37,7 @@ if (-not (Test-Path $workerSkript)) {
 # Umgebungsvariable fuer den Sub-Prozess: verhindert, dass der spaeter im
 # Worker eingebettete "claude -p"-Aufruf die Hooks dieses Projekts erneut
 # ausloest und so eine Endlosschleife erzeugt.
-$env:RENTENAUSKUNFT_HOOK_INTERN = "1"
+$env:CLAUDE_HISTORY_HOOK_INTERN = "1"
 
 $argumentListe = @(
     "-NoProfile",

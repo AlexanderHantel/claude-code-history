@@ -5,7 +5,7 @@ $ErrorActionPreference = "Continue"
 
 # Endlosschleifen-Schutz: aus einem von uns selbst gestarteten "claude -p"
 # soll der Hook nichts laden.
-if ($env:RENTENAUSKUNFT_HOOK_INTERN -eq "1") {
+if ($env:CLAUDE_HISTORY_HOOK_INTERN -eq "1") {
     exit 0
 }
 

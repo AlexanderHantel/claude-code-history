@@ -17,7 +17,7 @@ $ErrorActionPreference = "Continue"
 
 # Sicherstellen, dass das eingebettete "claude -p" die Hooks dieses
 # Projekts nicht erneut triggert.
-$env:RENTENAUSKUNFT_HOOK_INTERN = "1"
+$env:CLAUDE_HISTORY_HOOK_INTERN = "1"
 
 $historyVerzeichnis = Join-Path $ProjektVerzeichnis "specs\history"
 $historyDatei = Join-Path $historyVerzeichnis "history.md"
