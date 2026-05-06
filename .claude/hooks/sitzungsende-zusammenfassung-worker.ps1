@@ -53,7 +53,10 @@ if (-not $TranscriptPfad -or -not (Test-Path $TranscriptPfad)) {
     exit 0
 }
 
-$prompt = 'Lies die Transcript-Datei "' + $TranscriptPfad + '" (Claude-Code-JSONL-Format) und schreibe eine deutsche Zusammenfassung dieser Sitzung in MAXIMAL 300 Zeichen. Pflichtangaben falls vorhanden: gefundene Probleme und ihre Loesungen, getroffene technische Entscheidungen. Antworte NUR mit dem reinen Zusammenfassungstext, ohne Anführungszeichen, ohne Präfix, ohne Zeilenumbrüche.'
+$prompt = 'Lies die Transcript-Datei "' + $TranscriptPfad + '" (Claude-Code-JSONL-Format) und schreibe eine deutsche Zusammenfassung dieser Sitzung in MAXIMAL 300 Zeichen. ' +
+    'Pflichtangaben falls vorhanden: gefundene Probleme und ihre Loesungen, getroffene technische Entscheidungen. ' +
+    'Antworte NUR mit dem reinen Zusammenfassungstext, ohne Anführungszeichen, ohne Präfix, ohne Zeilenumbrüche, ' +
+    '**ohne Einführung (z.B. "Ich habe alle Infos gesammelt und schreibe jetzt eine Zusammenfassunf")**.'
 
 $zusammenfassung = ""
 try {

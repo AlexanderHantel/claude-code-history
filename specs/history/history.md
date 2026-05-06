@@ -1,2 +1,2 @@
 ﻿2026-05-04 14:45 - Bug in sitzungsende-zusammenfassung-worker.ps1 Zeile 23 gefunden: Tippfehler $historyerzeichnis statt $historyVerzeichnis lieferte $null, history.md wurde nie geschrieben. Variable korrigiert; Ordner via New-Item, Datei via Add-Content.
-2026-05-04 15:11 - (Sitzung beendet - keine Transcript-Datei gefunden)
+2026-05-04 15:20 - README um Abschnitt „Beispiel-Gedächtnis" mit Link auf specs/history/history.md ergänzt. Umgebungsvariable RENTENAUSKUNFT_HOOK_INTERN (Altprojekt-Artefakt) in allen drei Hook-Skripten zu CLAUDE_HISTORY_HOOK_INTERN umbenannt, um den Namen projektneutral zu halten.
